@@ -1,0 +1,13 @@
+[
+  { "id": 1, "pl": "być", "en": "to be", "pos": "verb", "level": 1 },
+  { "id": 2, "pl": "mieć", "en": "to have", "pos": "verb", "level": 1 },
+  { "id": 3, "pl": "robić", "en": "to do / make", "pos": "verb", "level": 1 },
+  { "id": 4, "pl": "iść", "en": "to go (on foot)", "pos": "verb", "level": 1 },
+  { "id": 5, "pl": "jechać", "en": "to go (by vehicle)", "pos": "verb", "level": 1 },
+
+  { "id": 6, "pl": "dom", "en": "home, house", "pos": "noun", "level": 1 },
+  { "id": 7, "pl": "dziecko", "en": "child", "pos": "noun", "level": 1 },
+  { "id": 8, "pl": "żona", "en": "wife", "pos": "noun", "level": 1 },
+  { "id": 9, "pl": "mąż", "en": "husband", "pos": "noun", "level": 1 },
+  { "id": 10, "pl": "praca", "en": "work", "pos": "noun", "level": 1 }
+]
