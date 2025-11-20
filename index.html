@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Polish War Machine</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    #card {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 1.5rem;
-      min-height: 120px;
-      margin-bottom: 1rem;
-    }
-    #polish {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-    }
-    #english {
-      font-size: 1.2rem;
-      opacity: 0.8;
-    }
-    button {
-      padding: 0.6rem 1rem;
-      margin-right: 0.5rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <h1>Polish War Machine</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Polski Coach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Polski Coach</h1>
+      <p class="subtitle">5–20 minutes a day. No excuses.</p>
 
-  <div id="card">
-    <div id="polish">Loading...</div>
-    <div id="english"></div>
-  </div>
+      <!-- Deck selection -->
+      <div class="deck-buttons">
+        <button id="deck-core" class="deck-btn active">Core words</button>
+        <button id="deck-verbs" class="deck-btn">Verbs</button>
+        <button id="deck-sentences" class="deck-btn">Sentences</button>
+      </div>
 
-<div style="margin-bottom: 1rem;">
-  <button id="deck-core">Core Words</button>
-  <button id="deck-verbs">Verbs</button>
-  <button id="deck-sentences">Sentences</button>
-</div>
+      <!-- Card -->
+      <div class="card">
+        <div id="polish" class="polish">Ładowanie...</div>
+        <pre id="english" class="english"></pre>
+      </div>
 
-<button id="show-btn">Show translation</button>
-<button id="next-btn">Next card</button>
+      <!-- Controls -->
+      <div class="controls">
+        <button id="show-btn">Show translation</button>
+        <button id="know-btn">I knew it</button>
+        <button id="dontknow-btn">I didn’t know</button>
+        <button id="next-btn">Next</button>
+      </div>
 
+      <!-- Simple stats -->
+      <div class="stats">
+        <span id="deck-label">Deck: core</span> ·
+        <span id="stats-correct">✓ 0</span> /
+        <span id="stats-wrong">✗ 0</span>
+      </div>
+    </div>
 
-  <script src="app.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
