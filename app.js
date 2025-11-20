@@ -12,13 +12,19 @@ const englishEl = document.getElementById("english");
 async function loadDeck(deckName) {
   let file = "";
 
-  if (deckName === "core") file = "data/core_words.json";
+  if (deckName === "core") file = "words.json";  
   if (deckName === "verbs") file = "data/verbs.json";
   if (deckName === "sentences") file = "data/sentences.json";
 
-  const res = await fetch(file);
-  cards = await res.json();
+  try {
+    const res = await fetch(file + "?v=" + Date.now(), { cache: "no-store" });
+    cards = await res.json();
+  } catch (err) {
+    console.error("Failed to load:", file, err);
+    return;
+  }
 
+  console.log("Loaded deck:", deckName, "cards:", cards.length);
   currentDeck = deckName;
   showRandomCard();
 }
@@ -33,7 +39,8 @@ function showRandomCard() {
   currentIndex = Math.floor(Math.random() * cards.length);
   const card = cards[currentIndex];
 
-  // handle different deck structures
+  console.log("Index:", currentIndex, "card:", card);
+
   if (currentDeck === "core") {
     polishEl.textContent = card.pl;
   }
@@ -43,10 +50,11 @@ function showRandomCard() {
   }
 
   if (currentDeck === "sentences") {
-    polishEl.textContent = card.en; // show English first
+    polishEl.textContent = card.en;
   }
 }
 
+// ---- SHOW TRANSLATION ----
 function showTranslation() {
   const card = cards[currentIndex];
   if (!card) return;
@@ -73,11 +81,10 @@ function showTranslation() {
   }
 }
 
-// ---- BUTTON WIRES ----
+// ---- BUTTONS ----
 document.getElementById("next-btn").addEventListener("click", showRandomCard);
 document.getElementById("show-btn").addEventListener("click", showTranslation);
 
-// ---- NEW: DECK SELECTORS ----
 document.getElementById("deck-core").addEventListener("click", () => loadDeck("core"));
 document.getElementById("deck-verbs").addEventListener("click", () => loadDeck("verbs"));
 document.getElementById("deck-sentences").addEventListener("click", () => loadDeck("sentences"));
