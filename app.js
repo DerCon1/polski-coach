@@ -80,7 +80,7 @@ function updateStatsDisplay() {
 async function loadDeck(deckName) {
   let file = "";
 
-  if (deckName === "core") file = "data/core_words.json";
+  if (deckName === "core") file = "data/words.json";
   if (deckName === "verbs") file = "data/verbs.json";
   if (deckName === "sentences") file = "data/sentences.json";
 
