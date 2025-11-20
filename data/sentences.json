@@ -1,0 +1,20 @@
+[
+  {
+    "id": 501,
+    "type": "pattern",
+    "en": "I am tired today.",
+    "pl": "Jestem dziś zmęczony."
+  },
+  {
+    "id": 502,
+    "type": "pattern",
+    "en": "I have a meeting tomorrow.",
+    "pl": "Jutro mam spotkanie."
+  },
+  {
+    "id": 503,
+    "type": "pattern",
+    "en": "What are we eating tonight?",
+    "pl": "Co jemy dzisiaj wieczorem?"
+  }
+]
