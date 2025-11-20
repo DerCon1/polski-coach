@@ -1,0 +1,37 @@
+[
+  {
+    "id": 101,
+    "pl_imp": "robić",
+    "pl_perf": "zrobić",
+    "en": "to do / make",
+    "conj_present": {
+      "ja": "robię",
+      "ty": "robisz",
+      "on/ona": "robi",
+      "my": "robimy",
+      "wy": "robicie",
+      "oni": "robią"
+    },
+    "past_masc": "robiłem",
+    "past_fem": "robiłam",
+    "future": "będę robił / będę robiła"
+  },
+
+  {
+    "id": 102,
+    "pl_imp": "iść",
+    "pl_perf": "pójść",
+    "en": "to go (on foot)",
+    "conj_present": {
+      "ja": "idę",
+      "ty": "idziesz",
+      "on/ona": "idzie",
+      "my": "idziemy",
+      "wy": "idziecie",
+      "oni": "idą"
+    },
+    "past_masc": "szedłem",
+    "past_fem": "szłam",
+    "future": "pójdę"
+  }
+]
